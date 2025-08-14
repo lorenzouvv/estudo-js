@@ -1,20 +1,14 @@
-function horario() {
-    const horaAtual = new Date().toLocaleTimeString();
-    console.log("Horário: " + horaAtual);
-    return horaAtual;
-}
-
 let intervaloRelogio;
 
 function atualizarHorario() {
+    // Atualiza imediatamente
     document.getElementById("horarioAtual").textContent = `Horário: ${new Date().toLocaleTimeString()}`;
     
-    // Atualiza a cada segundo (1000ms)
+    // Atualiza a cada segundo
     intervaloRelogio = setInterval(() => {
         document.getElementById("horarioAtual").textContent = `Horário: ${new Date().toLocaleTimeString()}`;
     }, 1000);
 }
-
 
 function bomX() {
     let hora = new Date().getHours();
@@ -62,10 +56,8 @@ function saudacao() {
 
     // Atualiza a UI
     document.getElementById("mensagemSaudacao").textContent = `Olá, ${name}!`;
-    document.getElementById("horarioSaudacao").textContent = `Agora são: ${horario()}`;
     document.getElementById("saudacaoTemporal").textContent = `${bomX()}`;
     document.getElementById("diaSemana").textContent = `Hoje é: ${diaDaSemana()}`;
-    d
 
     // Mostra o container
     const saudacaoContainer = document.getElementById("saudacaoContainer");
@@ -76,4 +68,6 @@ function saudacao() {
     nameInput.value = "";
     nameInput.focus();
 }
+
+// Inicia o relógio quando a página carrega
 window.addEventListener('load', atualizarHorario);
