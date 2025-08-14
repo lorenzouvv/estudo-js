@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen align-center justify-center flex flex-col gap-4 items-center">
+    <div class="flex flex-col gap-4 items-center justify-center border border-black p-4 rounded shadow-lg h-60 w-96">
+    <label class="w-full " for="nameInput">Digite seu nome:</label>
+    <input type="text" id="nameInput" class="w-full p-2 border border-black rounded-lg" placeholder="Seu nome aqui">
+    <button class="h-12 w-full bg-blue-500/75 hover:bg-blue-700/75 rounded-lg shadow-lg text-white text-shadow-lg text-2xl" onclick="saudacao()">Clique Aqui!</button>
+
+    <div id="saudacaoContainer">
+        <p id="mensagemSaudacao"></p>
+        <p id="horarioAtual"></p>
+        <p id="saudacaoTemporal"></p>
+        <p id="diaSemana"></p>
+    </div>
+
+    </div>
+</body>
+</html>
