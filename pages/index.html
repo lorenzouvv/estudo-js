@@ -11,7 +11,7 @@
 <body>
 <div class="bg-gray-100">
 
-    <div class="h-screen flex overflow-hidden bg-gray-200">
+    <div class="h-screen flex overflow-hidden bg-gray-100">
         <!-- sidebar -->
         <div class="fixed z-50 bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
             id="sidebar">
@@ -45,13 +45,12 @@
             </div>
            <!-- body content -->
 <div class="flex-1 overflow-auto p-8">
-    <h1 id="titulo" class="text-2xl font-semibold text-center mb-8">.</h1>
-    <p class="text-center mb-12">... Em Construção ...</p>
+    <h1 id="titulo" class="tracking-normal min-h-[1.5em] text-3xl font-semibold text-center mb-8"></h1>
+    <p class="tracking-widest text-center mb-12">... Em Construção ...</p>
     
-    <!-- Container dos cards - centralizado horizontalmente -->
     <div class="flex flex-wrap justify-center gap-8 w-full">
         <!-- Card 1 -->
-        <div class="w-80 h-52 bg-blue-500 rounded-2xl shadow-2xl relative cursor-pointer transition-all duration-300 hover:scale-105">
+        <div class="w-80 h-52 bg-gradient-to-tr from-blue-500 to-sky-300 rounded-2xl shadow-2xl relative cursor-pointer transition-all duration-300 hover:scale-105">
             <div class="glow opacity-0 transition-opacity duration-300"></div>
             <div class="p-6 flex flex-col h-full justify-between relative z-10">
                 <div>
@@ -65,7 +64,7 @@
         </div>
 
         <!-- Card 2 -->
-        <div class="w-80 h-52 bg-blue-500 rounded-2xl shadow-2xl relative cursor-pointer transition-all duration-300 hover:scale-105">
+        <div class="w-80 h-52 bg-gradient-to-tr from-blue-500 to-sky-300 rounded-2xl shadow-2xl relative cursor-pointer transition-all duration-300 hover:scale-105">
             <div class="glow opacity-0 transition-opacity duration-300"></div>
             <div class="p-6 flex flex-col h-full justify-between relative z-10">
                 <div>
@@ -79,7 +78,7 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="w-80 h-52 bg-blue-500 rounded-2xl shadow-2xl relative cursor-pointer transition-all duration-300 hover:scale-105">
+        <div class="w-80 h-52 bg-gradient-to-tr from-blue-500 to-sky-300 rounded-2xl shadow-2xl relative cursor-pointer transition-all duration-300 hover:scale-105">
             <div class="glow opacity-0 transition-opacity duration-300"></div>
             <div class="p-6 flex flex-col h-full justify-between relative z-10">
                 <div>
@@ -94,6 +93,8 @@
     </div>
 </div>
 
+    <!-- scripts importados -->
     <script src="..\scripts\sidebar.js"></script>
+    <script src="..\scripts\typewriter.js"></script>
 </body>
 </html>
