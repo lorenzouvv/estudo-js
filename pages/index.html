@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+<div class="bg-gray-100">
+
+    <div class="h-screen flex overflow-hidden bg-gray-200">
+        <!-- sidebar -->
+        <div class="fixed z-50 bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+            id="sidebar">
+            <!-- sidebar content -->
+            <div class="p-4">
+                <h1 class="text-2xl font-semibold">Menu</h1>
+                <ul class="mt-4">
+                    <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Início</a></li>
+                    <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Formulário</a></li>
+                    <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Calculadora</a></li>
+                    <li class="mb-2"><a href="#" class="block hover:text-indigo-400">Conversor de Temp</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- navbar -->
+            <div class="bg-white shadow">
+                <div class="container mx-auto">
+                    <div class="flex justify-between items-center py-4 px-2">
+                        <h1 class="text-xl font-semibold">Estudo-Js.</h1>
+
+                        <button class="text-gray-500 hover:text-gray-600" id="open-sidebar">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                    </div>
+                </div>
+            </div>
+           <!-- body content -->
+<div class="flex-1 overflow-auto p-8">
+    <h1 id="titulo" class="text-2xl font-semibold text-center mb-8">.</h1>
+    <p class="text-center mb-12">... Em Construção ...</p>
+    
+    <!-- Container dos cards - centralizado horizontalmente -->
+    <div class="flex flex-wrap justify-center gap-8 w-full">
+        <!-- Card 1 -->
+        <div class="w-80 h-52 bg-blue-500 rounded-2xl shadow-2xl relative cursor-pointer transition-all duration-300 hover:scale-105">
+            <div class="glow opacity-0 transition-opacity duration-300"></div>
+            <div class="p-6 flex flex-col h-full justify-between relative z-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Formulário</h2>
+                    <p class="text-gray-200">Teste de formulário feito em JavaScript.</p>
+                </div>
+                <button class="w-full py-2 bg-white text-blue-700 rounded-lg font-semibold hover:scale-105 transition-transform">
+                    Clique aqui!
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="w-80 h-52 bg-blue-500 rounded-2xl shadow-2xl relative cursor-pointer transition-all duration-300 hover:scale-105">
+            <div class="glow opacity-0 transition-opacity duration-300"></div>
+            <div class="p-6 flex flex-col h-full justify-between relative z-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Calculadora</h2>
+                    <p class="text-gray-200">Teste de calculadora feita em JavaScript.</p>
+                </div>
+                <button class="w-full py-2 bg-white text-blue-700 rounded-lg font-semibold hover:scale-105 transition-transform">
+                    Clique aqui!
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="w-80 h-52 bg-blue-500 rounded-2xl shadow-2xl relative cursor-pointer transition-all duration-300 hover:scale-105">
+            <div class="glow opacity-0 transition-opacity duration-300"></div>
+            <div class="p-6 flex flex-col h-full justify-between relative z-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Conversor</h2>
+                    <p class="text-gray-200">Teste de conversor de temperatura feito em JavaScript.</p>
+                </div>
+                <button class="w-full py-2 bg-white text-blue-700 rounded-lg font-semibold hover:scale-105 transition-transform">
+                    Clique aqui!
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="..\scripts\sidebar.js"></script>
+</body>
+</html>
