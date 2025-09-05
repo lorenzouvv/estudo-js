@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+
+    </style>
+</head> 
+<!-- Operadores Aritméticos =
+    + , - , * , / , ** (potenciação), % (resto da divisão) -->
+
+<!-- Operadores Relacionais =
+    > , < , >= , <= , == (igualdade), != (diferente),
+     === (estritamente igual), !== (estritamente diferente) -->
+
+<!-- Operadores Lógicos =
+    && (e), || (ou), ! (não)  -->
+
+<!-- Operadores Ternários =
+    (condição) ? valor1 : valor2 -->
+
+    <!-- ------------------------------------------------------------------- -->
+
+<!-- Selecionar elementos do DOM por marca
+getElementByTagName() -->
+
+<!-- Selecionar elementos do DOM por ID
+getElementById() -->
+
+<!-- selecionar elementos do DOM por classe
+getElementByClassName() -->
+
+<!-- Selecionar elementos do DOM por seletor CSS
+querySelector()
+querySelectorAll() -->
+
+<!-- Manipular elementos do DOM
+innerText
+innerHTML
+style
+className
+classList -->
+
+<body>
+    <h1>Preencha seus dados</h1>
+    <form action="">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+        <br>
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade">
+        <br>
+        <button type="submit" id="enviar">Enviar</button>
+    </form>
+    <h1 id="caixa"></h1>
+    <script>
+        document.getElementById("enviar").onclick = function(event) {
+            event.preventDefault();
+            let nome = document.getElementById("nome").value;
+            let idade = parseInt(document.getElementById("idade").value);
+            let caixa = document.getElementById("caixa");
+            if (enviar = true) {
+                    caixa.innerText = `Olá ${nome}, você tem ${idade} anos!`;
+                    caixa.style.color = "green";
+                    caixa.style.fontSize = "40px";
+                    caixa.style.fontWeight = "bold";
+            } else {
+                caixa.innerText = "Por favor, preencha todos os campos!";
+                caixa.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

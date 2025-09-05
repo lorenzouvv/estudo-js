@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<!-- Operadores Aritméticos =
+    + , - , * , / , ** (potenciação), % (resto da divisão) -->
+
+<!-- Operadores Relacionais =
+    > , < , >= , <= , == (igualdade), != (diferente),
+     === (estritamente igual), !== (estritamente diferente) -->
+
+<!-- Operadores Lógicos =
+    && (e), || (ou), ! (não)  -->
+
+<!-- Operadores Ternários =
+    (condição) ? valor1 : valor2 -->
+
+<body>
+    <h1>Hello, wORLD!</h1>
+    <script>
+        var titulo = document.querySelector('h1');
+        tituloGrande = titulo.textContent.toUpperCase();
+        titulo.textContent = tituloGrande;
+
+        var name = window.prompt('What is your name?');
+        var lastname = window.prompt('What is your lastname?');
+        var sum = name.length + lastname.length;
+        document.write(`Hello, <strong>${name} ${lastname}</strong>! The sum of the number of letters in your name and lastname is <strong>${sum}</strong>!`);
+
+    </script>
+</body>
+</html>

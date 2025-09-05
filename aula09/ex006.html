@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        div {
+            width: 200px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            border-radius: 50px;
+            margin: 20px auto;
+            line-height: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head> 
+<!-- Operadores Aritméticos =
+    + , - , * , / , ** (potenciação), % (resto da divisão) -->
+
+<!-- Operadores Relacionais =
+    > , < , >= , <= , == (igualdade), != (diferente),
+     === (estritamente igual), !== (estritamente diferente) -->
+
+<!-- Operadores Lógicos =
+    && (e), || (ou), ! (não)  -->
+
+<!-- Operadores Ternários =
+    (condição) ? valor1 : valor2 -->
+
+    <!-- ------------------------------------------------------------------- -->
+
+<!-- Selecionar elementos do DOM por marca
+getElementByTagName() -->
+
+<!-- Selecionar elementos do DOM por ID
+getElementById() -->
+
+<!-- selecionar elementos do DOM por classe
+getElementByClassName() -->
+
+<!-- Selecionar elementos do DOM por seletor CSS
+querySelector()
+querySelectorAll() -->
+
+<!-- Manipular elementos do DOM
+innerText
+innerHTML
+style
+className
+classList -->
+
+<body>
+    <h1>Iniciando estudos com <strong>DOM</strong></h1>
+    <p>Aqui vai o resultado</p>
+    <p>dom</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+        var p1 = document.getElementsByTagName('p')[1];
+        document.write(p1.innerText);
+        var d = document.querySelector('div#msg');
+        d.onclick = function() {
+            var clicado = d.innerText;
+            if (clicado === 'Clique em mim'){
+                d.style.backgroundColor = 'black';
+                d.style.fontWeight = 'bold';
+                d.style.color = 'white';
+                d.innerText = 'Clique para reverter';
+            } else {
+                d.style.backgroundColor = 'blue';
+                d.style.fontWeight = 'bold';
+                d.style.color = 'white';
+                d.innerText = 'Clique em mim';
+            }
+        }
+    </script>
+</body>
+</html>
