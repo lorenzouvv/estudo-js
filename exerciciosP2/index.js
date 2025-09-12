@@ -3,53 +3,54 @@ function verificar(){
     var anoNascimento = parseInt(ano.value)
     var anoAtual = new Date().getFullYear()
     var idade = anoAtual - anoNascimento
-    
-    var sexMas = document.querySelector("input#mas").checked
-    var sexFem = document.querySelector("input#fem").checked
     var res = document.querySelector("div#res")
-    var img = document.querySelector("div#img")
 
-    if (isNaN(anoNascimento)){
-        res.innerHTML = (`<p style='color: red;'>Selecione o ano!</p>`)
-        return
-    } else if (anoNascimento > anoAtual) {
-        res.innerHTML = (`<p style='color: red;'>Selecione um ano antes de ${anoAtual}!</p>`)
-        return
-    }
-
-    if (!sexFem && !sexMas) {
-        res.innerHTML = (`<p style='color: red;'>Escolha um sexo!</p>`)
-        return
-    }
-
-    if(idade > 120){
-        res.innerHTML = (`<p style='color: red;'>Calma lá, você não é vampiro!</p>`)
-        return
-    }
-
-    if (sexMas && idade < 12) {
-        res.innerHTML = (`<p>Você é criança com ${idade} anos`)
-        img.innerHTML = (`<img src="crianca.png" alt="kid">`)
-    } else if (sexMas && idade < 18) {
-        res.innerHTML = (`<p>Você é jovem com ${idade} anos`)
-        img.innerHTML = (`<img src="jovem.webp" alt="young">`)
-    } else if (sexMas && idade < 60) {
-        res.innerHTML = (`<p>Você é adulto com ${idade} anos`)
-        img.innerHTML = (`<img src="adulto.png" alt="adult">`)
-    } else if (sexMas && idade < 120){
-        res.innerHTML = (`<p>Você é idoso com ${idade} anos`)
-        img.innerHTML = (`<img src="idoso.png" alt="older">`)
-    } else if (sexFem && idade < 12) {
-        res.innerHTML = (`<p>Você é criança com ${idade} anos`)
-        img.innerHTML = (`<img src="garota.png" alt="kid">`)
-    } else if (sexFem && idade < 18) {
-        res.innerHTML = (`<p>Você é jovem com ${idade} anos`)
-        img.innerHTML = (`<img src="jovemF.jpg" alt="young">`)
-    } else if (sexFem && idade < 60) {
-        res.innerHTML = (`<p>Você é adulta com ${idade} anos`)
-        img.innerHTML = (`<img src="adulta.png" alt="adult">`)
+    if(isNaN(anoNascimento) || anoNascimento > anoAtual){
+        window.alert('[ERRO] Dados Incorretos relacionado ao ano!')
     } else {
-        res.innerHTML = (`<p>Você é idosa com ${idade} anos`)
-        img.innerHTML = (`<img src="idosa.jpg" alt="older">`)
+        var sexo = document.getElementsByName("sexo")
+        var gen = ''
+        var img = document.createElement("img")
+        img.setAttribute('id','foto')
+        if (sexo[0].checked){
+            gen = 'Homem'
+            if(idade < 12 && idade >= 0){
+                //criança
+                img.setAttribute('src','crianca.png')
+            }
+            else if (idade < 18){
+                //jovem
+                img.setAttribute('src','jovemM.png')
+            }
+            else if (idade < 60){
+                //adulto
+                img.setAttribute('src','adulto.png')
+            }
+            else{
+                //idoso
+                img.setAttribute('src','idoso.png')
+            }
+        } else if (sexo[1].checked){
+            gen = 'Mulher'
+            if(idade < 12 && idade >= 0){
+                //criança
+                img.setAttribute('src','garota.png')
+            }
+            else if (idade < 18){
+                //jovem
+                img.setAttribute('src','jovemF.jpg')
+            }
+            else if (idade < 60){
+                //idosa
+                img.setAttribute('src','adulta.png')
+            }
+            else{
+                //idosa
+                img.setAttribute('src','idosa.jpg')
+            }
+        }
+        res.style.textAlign = 'center'
+        res.innerHTML = `Detectamos um(a)${gen} com ${idade} anos!`
+        res.appendChild(img)
     }
 }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        background-color: rgb(238, 238, 238);
+    }
+    header{
+        text-align: center;
+    }
+    section{
+        height: 400px;
+        background-color: rgb(255, 255, 255);
+        width: 700px;
+        margin: auto;
+        border: 20px;
+        border-radius: 20px;
+    }
+    .form{
+        text-align: start;
+        padding: 15px;
+
+    }
+    input{
+        margin: auto;
+        border-radius: 10px;
+        height: 20px;
+        border: none;
+        box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.055);
+    }
+    button{
+        background-color: rgb(0, 174, 255);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        height: 30px;
+        width: 80px;
+        box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.055);
+        cursor: pointer;
+    }
+    #res{
+        margin-left: 10px;
+    }
+
+</style>
+<body>
+    <header>
+        <h1>Vamos Contar</h1>
+    </header>
+    <section>
+        <div class="form">
+            <label for="">Início:</label> <input type="number" id="inicio">
+        </div>
+        <div class="form">
+            <label for="">Fim:</label> <input type="number" id="fim">
+        </div>
+        <div class="form">
+            <label for="">Passo:</label> <input type="number" id="passo">
+        </div>
+        <div class="form">
+            <button onclick="contar()">Contar</button>
+        </div>
+        
+        
+        <div id="res"></div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

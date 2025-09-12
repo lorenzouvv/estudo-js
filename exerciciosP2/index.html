@@ -11,24 +11,18 @@
     }
     body{
         background-color: aliceblue;
-        text-align: center;
+        margin: auto;
         align-items: center;
-        justify-content: center;
         display: flex;
         flex-direction: column;
     }
     #box{
         background-color: white;
         margin-top: 10px;
-        width: 70%;
+        width: 50%;
         height: 500px;
         border-radius: 20px;
         box-shadow: 1px 1px 5px 5px rgb(236, 236, 236);
-        align-items: start;
-        justify-content: start;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
     }
     .form{
         margin-left: 20px;
@@ -44,25 +38,17 @@
         width: 90px;
         box-shadow: 1px 1px 0px 0px rgb(216, 216, 216);
     }
-
     #res{
-        margin-left: 15px;
-        font-weight: bolder;
-        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
     }
-
-    #img{
-        margin-top: 10px;
-        margin-left: 15px;
-    }
-
-    #img img {
+    #foto {
         width: 250px;
         height: 250px;
-        border-radius: 20px;
         object-fit: cover;
+        border-radius: 20px;
+        margin: 15px auto;
     }
-
 </style>
 <body>
     <h1>Verificador de Idade</h1>
@@ -73,17 +59,13 @@
         </div>
         <div class="form">
         <label for="">Sexo: </label> 
-        
-        <input type="radio" name="sexo" id="mas" value="masculino"> <label for="">Masculino</label>
+        <input type="radio" name="sexo" id="mas" value="masculino" checked> <label for="">Masculino</label>
         <input type="radio" name="sexo" id="fem" value="feminino"> <label for="">Feminino</label>
         </div>
         <div class="form">
         <button onclick="verificar()">Verificar</button>
         </div>
         <div id="res">
-
-        </div>
-        <div id="img">
 
         </div>
     </div>
